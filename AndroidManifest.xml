@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chapter02"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.chapter02.demo.TestDemo" />
+        <activity android:name="com.example.chapter02.intent.TestIntent" />
+        <activity android:name="com.example.chapter02.intent.IntentSkip" >
+            <intent-filter>
+                <action android:name="test.action.intent.skip" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="test.category.intent.MY_CATEGORY" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.chapter02.intent.IntentData" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.chapter02.period.TestPeriod" />
+        <activity android:name="com.example.chapter02.period.PeriodNormal" />
+        <activity
+            android:name="com.example.chapter02.period.PeriodDialog"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name="com.example.chapter02.start.TestStart" />
+        <activity
+            android:name="com.example.chapter02.start.StartOne"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.example.chapter02.start.StartTwo"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.example.chapter02.start.StartThree"
+            android:launchMode="singleInstance" />
+    </application>
+
+</manifest>
